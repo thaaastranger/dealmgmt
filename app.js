@@ -313,110 +313,140 @@ function showAIInsightsContent() {
 
 function getActivityHTML() {
     return `
-        <div class="timeline">
-            <!-- Date separator -->
-            <div class="timeline-date">
-                <span>Today, Feb 7</span>
-            </div>
-
-            <!-- Activity Card 1 -->
-            <div class="activity-card">
-                <div class="activity-card-header">
-                    <h3 class="activity-card-title">CFO Blocking Q1 Budget</h3>
-                    <span class="activity-card-time">1 hour ago</span>
-                </div>
-                <div class="activity-card-body">
-                    <p class="activity-card-text">AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.</p>
-                </div>
-                <div class="activity-card-footer">
-                    <div class="activity-card-tags">
-                        <span class="pill-tag risk">Deal at risk</span>
-                        <span class="pill-tag risk">Needs ROI proof by Friday</span>
-                    </div>
-                    <div class="activity-card-actions">
-                        <button class="card-btn ghost" onclick="handleScheduleCall()">Schedule Call</button>
-                        <button class="card-btn filled" onclick="handleSendROI()">Send ROI</button>
+        <!-- Activity Feed (Timeline) -->
+        <div class="timeline-feed">
+            <!-- Activity Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-icon warning">
+                        <img src="assets/icons/Notification%202%20-%20Iconly%20Pro.svg" alt="Warning">
                     </div>
                 </div>
-            </div>
-
-            <!-- Activity Card 2 -->
-            <div class="activity-card">
-                <div class="activity-card-header">
-                    <h3 class="activity-card-title">Share TechCorp Case Study</h3>
-                    <span class="activity-card-badge">89% match</span>
-                    <span class="activity-card-time">3 hours ago</span>
-                </div>
-                <div class="activity-card-body">
-                    <p class="activity-card-text">AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.</p>
-                </div>
-                <div class="activity-card-footer">
-                    <div class="activity-card-tags">
-                        <span class="pill-tag ai-rec">AI Recommended</span>
-                        <span class="pill-tag success">High Impact</span>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">CFO Blocking Q1 Budget</h3>
+                        <div class="timeline-meta">
+                            <div class="assignee">
+                                <img src="assets/img/Ellipse 32.png" alt="Sobhan">
+                                <span>Sobhan Rabbani</span>
+                            </div>
+                            <span class="time-ago">1 hour ago</span>
+                            <span class="due-badge orange">
+                                <img src="assets/icons/Calendar%20-%20Iconly%20Pro.svg" alt="Due">
+                                Due: Feb 18
+                            </span>
+                        </div>
+                        <button class="menu-btn">
+                            <img src="assets/icons/menu.svg" alt="Menu">
+                        </button>
                     </div>
-                    <div class="activity-card-actions">
-                        <button class="card-btn ghost" onclick="handleViewCaseStudy()">View Case Study</button>
-                        <button class="card-btn filled" onclick="handleEmailDavid()">Email To David</button>
+                    <div class="timeline-body">
+                        <p class="ai-summary-text">
+                            AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.
+                        </p>
+                        <div class="timeline-footer">
+                            <div class="tags">
+                                <span class="tag risk">Deal at risk</span>
+                                <span class="tag purple">Needs ROI proof by Friday</span>
+                            </div>
+                            <div class="actions">
+                                <button class="action-btn ghost">Schedule Call</button>
+                                <button class="action-btn primary black">Send ROI</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Activity Card 3 -->
-            <div class="activity-card">
-                <div class="activity-card-header">
-                    <h3 class="activity-card-title">Competitor Mentioned: LogixFlow</h3>
-                    <span class="activity-card-time">4 hours ago</span>
-                </div>
-                <div class="activity-card-body">
-                    <p class="activity-card-text">AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.</p>
-                </div>
-                <div class="activity-card-footer">
-                    <div class="activity-card-tags">
-                        <span class="pill-tag warning">2-week setup vs our 8 weeks</span>
-                    </div>
-                    <div class="activity-card-actions">
-                        <button class="card-btn ghost" onclick="handleLogixFlow()">LogixFlow</button>
-                        <button class="card-btn filled" onclick="handleRequestIntro()">Request Intro</button>
+            <!-- Activity Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-icon sparkle">
+                        <img src="assets/icons/Stars%20-%20Iconly%20Pro.svg" alt="AI">
                     </div>
                 </div>
-            </div>
-
-            <!-- Date separator -->
-            <div class="timeline-date">
-                <span>Yesterday, Feb 6</span>
-            </div>
-
-            <!-- Activity Card 4 -->
-            <div class="activity-card">
-                <div class="activity-card-header">
-                    <h3 class="activity-card-title">Discovery call with Julian Park</h3>
-                    <span class="activity-card-time">Yesterday</span>
-                </div>
-                <div class="activity-card-body">
-                    <p class="activity-card-text">30 min call to review fleet requirements. Julian confirmed interest in Q2 deployment pending budget approval from CFO.</p>
-                </div>
-                <div class="activity-card-footer">
-                    <div class="activity-card-tags">
-                        <span class="pill-tag success">Positive Signal</span>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Share TechCorp Case Study</h3>
+                        <span class="match-badge">89% match</span>
+                        <div class="timeline-meta">
+                            <span class="time-ago">3 hours ago</span>
+                            <span class="match-badge extra">
+                                <img src="assets/icons/User%20-%20Iconly%20Pro.svg" alt="Match">
+                                89% match
+                            </span>
+                        </div>
+                        <button class="menu-btn">
+                            <img src="assets/icons/menu.svg" alt="Menu">
+                        </button>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="ai-summary-text">
+                            AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.
+                        </p>
+                        <div class="timeline-footer">
+                            <div class="tags">
+                                <span class="tag black">AI Recommended</span>
+                                <span class="tag green">High Impact</span>
+                            </div>
+                            <div class="actions">
+                                <button class="action-btn ghost">View Case Study</button>
+                                <button class="action-btn primary black">Email To David</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Activity Card 5 -->
-            <div class="activity-card">
-                <div class="activity-card-header">
-                    <h3 class="activity-card-title">Proposal sent to Northway Logistics</h3>
-                    <span class="activity-card-time">Yesterday</span>
+            <!-- Activity Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-icon phone">
+                        <img src="assets/icons/Phone%20Call%20Ringing%20-%20Iconly%20Pro.svg" alt="Competitor">
+                    </div>
                 </div>
-                <div class="activity-card-body">
-                    <p class="activity-card-text">Fleet Operations Platform proposal — $62,500 projected value, Q2 timeline.</p>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Competitor Mentioned: LogixFlow</h3>
+                        <div class="timeline-meta">
+                            <div class="assignee">
+                                <img src="assets/img/Ellipse 32-1.png" alt="Sarah">
+                                <span>Sarah Sanders (Ops Dir)</span>
+                            </div>
+                            <span class="time-ago">4 hours ago</span>
+                        </div>
+                        <button class="menu-btn">
+                            <img src="assets/icons/menu.svg" alt="Menu">
+                        </button>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="ai-summary-text">
+                            AI detected recurring dispatcher overload during peak hours across multiple data sources. Manual route reassignment and lack of alert prioritization identified as key bottlenecks.
+                        </p>
+                        <div class="timeline-footer">
+                            <div class="tags">
+                                <span class="tag red-badge">2-week setup vs our 8 weeks</span>
+                            </div>
+                            <div class="actions">
+                                <button class="action-btn ghost">LogixFlow</button>
+                                <button class="action-btn primary black">Request Intro</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Timeline end -->
+            <!-- End of Activity -->
             <div class="timeline-end">
-                <span>Deal created, Feb 3, 2026</span>
+                <div class="timeline-track">
+                    <div class="timeline-icon end">
+                        <img src="assets/icons/Heart%20rate%20-%20Iconly%20Pro.svg" alt="End">
+                    </div>
+                </div>
+                <span class="end-text">End of activity, Feb 7, 2026</span>
             </div>
         </div>
     `;

@@ -640,80 +640,79 @@ body {
 .timeline-item {
     display: flex;
     gap: 16px;
+    margin-bottom: 24px;
     position: relative;
-    padding-bottom: 24px;
 }
 
-/* Vertical line connecting nodes */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 32px;
-    bottom: 0;
-    width: 2px;
-    background: var(--border-light);
-}
-
-.timeline-item:last-of-type::before {
-    display: none;
-}
-
-.timeline-node {
+/* Timeline Track (Line + Icon) */
+.timeline-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
     flex-shrink: 0;
-    z-index: 1;
-    padding-top: 2px;
+    position: relative;
+    padding-top: 4px; /* Align icon with header text */
 }
 
-.timeline-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: var(--radius-full);
+/* The Vertical Line */
+.timeline-line {
+    position: absolute;
+    top: 28px; /* Start below the icon */
+    bottom: -32px; /* Extend to next item */
+    width: 2px;
+    background-color: var(--border-light);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-item:last-child .timeline-line {
+    display: none; /* No line after last item */
+}
+
+/* Icons */
+.timeline-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-gray-light);
-    color: var(--text-secondary);
-    border: 2px solid var(--bg-white);
-    box-shadow: 0 0 0 2px var(--border-light);
+    z-index: 1; /* Above the line */
+    background: var(--bg-white); /* White border effect if needed */
 }
 
-.timeline-dot.warning {
-    background: var(--tag-risk-bg);
-    color: var(--tag-risk-text);
-    box-shadow: 0 0 0 2px var(--tag-risk-bg);
+.timeline-icon img {
+    width: 16px;
+    height: 16px;
 }
 
-.timeline-dot.ai {
-    background: linear-gradient(135deg, #818cf8, #a78bfa);
-    color: white;
-    box-shadow: 0 0 0 2px #e0e7ff;
+.timeline-icon.warning {
+    /* No background circle in design, just the icon? Or white bg? */
+    /* Screenshot shows blue circle with exclamation */
+    /* Let's assume the SVG handles color or we add style */
 }
 
-.timeline-dot.default {
-    background: var(--bg-gray-light);
-    color: var(--text-muted);
+.timeline-icon.sparkle {
+    /* Sparkle icon style */
 }
 
-.timeline-dot.end {
-    width: 12px;
-    height: 12px;
-    margin: 10px;
-    background: var(--border-color);
-    box-shadow: none;
-}
-
+/* Timeline Content */
 .timeline-content {
     flex: 1;
-    min-width: 0;
-    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* Prevent flex overflow */
 }
 
+/* HeaderRow: Title | Assignee | Time */
 .timeline-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 12px;
+    margin-bottom: 8px;
+    min-height: 24px;
     flex-wrap: wrap;
 }
 
@@ -721,28 +720,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
-}
-
-.timeline-time {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-left: auto;
-}
-
-.timeline-badge {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--tag-ai-text);
-    background: var(--tag-ai-bg);
-    padding: 2px 8px;
-    border-radius: var(--radius-sm);
-}
-
-.timeline-desc {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .timeline-meta {
@@ -750,47 +728,74 @@ body {
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 13px;
 }
 
-.timeline-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.timeline-assignee {
+.assignee {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-left: auto;
 }
 
-.timeline-assignee img {
+.assignee img {
     width: 20px;
     height: 20px;
-    border-radius: var(--radius-full);
+    border-radius: 50%;
 }
 
-.timeline-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.timeline-actions .action-btn {
-    padding: 6px 14px;
+.due-badge.orange {
+    background-color: #FFEDD5; /* Orange-100 */
+    color: #C2410C; /* Orange-700 */
+    padding: 2px 8px;
+    border-radius: 12px;
     font-size: 12px;
-}
-
-.timeline-end {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
+}
+
+.match-badge {
     color: var(--text-muted);
-    font-size: 12px;
-    padding-top: 4px;
+    font-size: 13px;
+}
+
+.menu-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    padding: 4px;
+}
+
+.menu-btn:hover {
+    opacity: 1;
+    background-color: var(--bg-gray-light);
+    border-radius: 4px;
+}
+
+/* Timeline Body Box */
+.timeline-body {
+    background-color: #F8FAFC; /* Slate-50 */
+    border-radius: 8px;
+    padding: 16px;
+    /* Indented alignment is handled by parent flex/gap */
+}
+
+.ai-summary-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.timeline-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 /* Tags */
@@ -801,91 +806,94 @@ body {
 }
 
 .tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px;
     font-size: 12px;
     font-weight: 500;
-    border-radius: var(--radius-sm);
+    padding: 4px 10px;
+    border-radius: 16px; /* Pill shape */
 }
 
 .tag.risk {
-    background: var(--tag-risk-bg);
-    color: var(--tag-risk-text);
+    background-color: #FEE2E2;
+    color: #B91C1C;
 }
 
 .tag.purple {
-    background: var(--tag-purple-bg);
-    color: var(--tag-purple-text);
+    background-color: #F3E8FF;
+    color: #7E22CE;
 }
 
-.tag.success {
-    background: var(--tag-success-bg);
-    color: var(--tag-success-text);
+.tag.black {
+    background-color: #000;
+    color: #FFF;
 }
 
-.tag.warning-badge {
-    background: var(--tag-warning-bg);
-    color: var(--tag-warning-text);
+.tag.green {
+    background-color: #DCFCE7;
+    color: #15803D;
 }
 
-.tag.ai-rec {
-    background: var(--tag-ai-bg);
-    color: var(--tag-ai-text);
+.tag.red-badge {
+    background-color: #FECACA;
+    color: #991B1B;
 }
 
-/* Action Buttons */
+/* Actions */
 .actions {
     display: flex;
     gap: 8px;
 }
 
 .action-btn {
-    padding: 8px 16px;
     font-size: 13px;
-    font-weight: 500;
-    border-radius: var(--radius-md);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: var(--transition);
-    border: none;
-}
-
-.action-btn.primary {
-    background: var(--text-primary);
-    color: white;
-}
-
-.action-btn.primary:hover {
-    background: #333;
+    transition: all 0.2s;
 }
 
 .action-btn.ghost {
     background: transparent;
+    border: none;
     color: var(--text-primary);
-    border: 1px solid var(--border-color);
 }
 
 .action-btn.ghost:hover {
-    background: var(--bg-gray-light);
-    border-color: var(--text-secondary);
+    background-color: rgba(0,0,0,0.05);
 }
 
-/* Activity End */
-.activity-end {
+.action-btn.primary.black {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.action-btn.primary.black:hover {
+    background-color: #333;
+}
+
+/* Timeline End */
+.timeline-end {
     display: flex;
+    gap: 16px;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 24px;
-    color: var(--text-muted);
-    font-size: 13px;
+    margin-top: 8px;
 }
 
-.activity-end img {
-    width: 16px;
-    height: 16px;
+.timeline-end .timeline-track {
+    /* Align with items */
+    width: 24px; 
+}
+
+.timeline-icon.end {
     opacity: 0.5;
 }
+
+.end-text {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
 
 /* ==========================
    RIGHT SIDEBAR (Company Info)
