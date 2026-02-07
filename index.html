@@ -353,6 +353,9 @@
                             <div class="file-item">
                                 <img src="assets/icons/Folder File - Iconly Pro.svg" alt="File">
                                 <span>Agreement</span>
+                                <button class="file-menu-btn">
+                                    <img src="assets/icons/menu.svg" alt="Menu">
+                                </button>
                             </div>
                             <div class="file-item">
                                 <img src="assets/icons/Folder File - Iconly Pro.svg" alt="File">
@@ -380,5 +383,24 @@
     </div>
 
     <script src="app.js"></script>
+
+    <!-- PDF Viewer Modal -->
+    <div class="modal-overlay" id="pdf-modal">
+        <div class="modal-content pdf-modal-content">
+            <div class="modal-header">
+                <h2 id="pdf-modal-title">Document Viewer</h2>
+                <button class="close-modal-btn">
+                    <img src="assets/icons/Close-Square.svg" alt="Close">
+                </button>
+            </div>
+            <div class="pdf-container">
+                <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+                <div class="pdf-placeholder">
+                    <p>Preview not available in this demo.</p>
+                    <button class="action-btn primary black">Download File</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

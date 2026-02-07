@@ -44,6 +44,79 @@ function initRightSidebarInteractions() {
             showAddCustomFieldModal();
         });
     }
+
+    // Shared Files interactions
+    initSharedFilesInteractions();
+}
+
+function initSharedFilesInteractions() {
+    // File menu buttons
+    document.querySelectorAll('.file-menu-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const fileItem = this.closest('.file-item');
+            const fileName = fileItem.querySelector('span').textContent;
+
+            showDropdown(this, [
+                { 
+                    label: 'View', 
+                    icon: 'show', 
+                    action: () => openPdfModal(fileName) 
+                },
+                { 
+                    label: 'Delete', 
+                    icon: 'delete', 
+                    danger: true, 
+                    action: () => {
+                        if(confirm(`Are you sure you want to delete "${fileName}"?`)) {
+                            fileItem.remove();
+                            showNotification('File deleted successfully', 'success');
+                        }
+                    } 
+                }
+            ]);
+        });
+    });
+
+    // PDF Modal Close
+    const modal = document.getElementById('pdf-modal');
+    if (modal) {
+        modal.querySelector('.close-modal-btn').addEventListener('click', () => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.opacity = '0';
+                setTimeout(() => modal.style.display = 'none', 200);
+            }, 10);
+        });
+
+        // Close on click outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                modal.style.opacity = '0';
+                setTimeout(() => modal.style.display = 'none', 200);
+            }
+        });
+    }
+}
+
+function openPdfModal(fileName) {
+    const modal = document.getElementById('pdf-modal');
+    const title = document.getElementById('pdf-modal-title');
+    const placeholder = modal.querySelector('.pdf-placeholder p');
+    
+    if (modal && title) {
+        title.textContent = fileName;
+        // In a real app, you'd set the iframe src here based on the file
+        // document.getElementById('pdf-frame').src = ...
+        placeholder.textContent = `Preview of "${fileName}" not available in this demo.`;
+        
+        modal.style.display = 'flex';
+        // Force reflow
+        void modal.offsetWidth; 
+        modal.style.opacity = '1';
+        modal.classList.add('active');
+    }
 }
 
 function initAssigneeHoverMenus() {
