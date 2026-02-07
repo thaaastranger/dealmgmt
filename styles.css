@@ -1145,6 +1145,22 @@ body {
     gap: 10px;
 }
 
+/* Assignee Item */
+.assignee-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 2px;
+}
+
+.assignee-item:hover {
+    background: var(--bg-gray-light);
+}
+
 .assignee-item img {
     width: 32px;
     height: 32px;
@@ -1175,28 +1191,33 @@ body {
 }
 
 /* File Item */
+/* File Item - Matching Assignee Item */
 .file-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 16px;
+    padding: 8px 12px; /* Matching assignee-item specific padding if it were visible, strictly following design "UI structure and states" */
     background: transparent;
     border: none;
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.2s ease;
     position: relative;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .file-item:hover {
-    background: #F8FAFC; /* Light gray hover */
-    border-color: transparent;
+    background: var(--bg-gray-light); /* Consistent hover */
 }
 
-.file-item img {
-    width: 20px;
-    height: 20px;
+.file-item img, 
+.file-item svg {
+    width: 32px; /* Match assignee avatar size */
+    height: 32px;
+    padding: 6px; /* Icon inside box */
+    background: #f0f4f8; /* Light blue/gray bg for icon */
+    border-radius: 50%; /* Circular like avatar */
+    color: var(--primary-blue);
 }
 
 .file-item span {
@@ -1371,13 +1392,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px); /* Modern blur effect */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-overlay.active {
@@ -1385,15 +1407,15 @@ body {
 }
 
 .modal {
-    background: var(--bg-white);
-    border-radius: var(--radius-lg);
+    background: #ffffff;
+    border-radius: 24px; /* Larger, smoother corners */
     width: 100%;
-    max-width: 480px;
-    max-height: 90vh;
+    max-width: 520px;
+    max-height: 85vh;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    transform: scale(0.95) translateY(10px);
-    transition: transform 0.2s ease;
+    box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0,0,0,0.05); /* Deep shadow + border ring */
+    transform: scale(0.96) translateY(8px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-overlay.active .modal {
@@ -1404,23 +1426,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 24px;
+    padding: 24px 32px 20px; /* Increased padding */
     border-bottom: 1px solid var(--border-light);
 }
 
 .modal-header h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--text-primary);
 }
 
+/* Fixed the stray brace error here */
+.close-modal-btn:hover {
+    opacity: 1;
+    background: var(--bg-gray-light);
+    border-radius: 8px;
     color: var(--text-primary);
 }
 
 .modal-content {
-    padding: 24px;
+    padding: 32px;
     overflow-y: auto;
-    max-height: calc(90vh - 80px);
+    max-height: calc(85vh - 80px);
 }
 
 /* ==========================
