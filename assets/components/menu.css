@@ -1,0 +1,181 @@
+/**
+ * Menu Component Styles
+ * Based on Figma design: node-id=40:6666
+ *
+ * Uses dynamic typography from textStyles.json (body2)
+ * Uses dynamic colors from design system tokens
+ */
+
+/* ========================================
+   MENU CONTAINER
+   ======================================== */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ========================================
+   MENU ITEM
+   ======================================== */
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius-small);
+  background: var(--menu-item-background);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item:hover:not(.menu-item-disabled) {
+  background: linear-gradient(var(--menu-item-background-hover), var(--menu-item-background-hover)), var(--menu-item-background);
+}
+
+.menu-item.menu-item-active {
+  /* Active state can be customized */
+}
+
+.menu-item.menu-item-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ========================================
+   MENU ITEM CONTENT
+   ======================================== */
+
+/* Left section with icon and label */
+.menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Leading icon */
+.menu-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--menu-item-icon-size);
+  height: var(--menu-item-icon-size);
+  overflow: hidden;
+}
+
+.menu-item-icon svg,
+.menu-item-icon img {
+  width: 10.667px;
+  height: 10.667px;
+  display: block;
+}
+
+.menu-item-disabled .menu-item-icon {
+  opacity: 0.4;
+}
+
+/* Label text */
+.menu-item-label {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--typography-body2-font-family);
+  font-weight: var(--typography-body2-font-weight);
+  font-size: var(--typography-body2-font-size);
+  line-height: var(--typography-body2-line-height);
+  letter-spacing: var(--typography-body2-letter-spacing);
+  color: var(--menu-item-text);
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.menu-item-disabled .menu-item-label {
+  color: var(--menu-item-text-disabled);
+}
+
+/* Right section with trailing icons */
+.menu-item-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Second trailing icon (optional) */
+.menu-item-second-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--menu-item-icon-size);
+  height: var(--menu-item-icon-size);
+  overflow: hidden;
+}
+
+.menu-item-second-icon svg,
+.menu-item-second-icon img {
+  width: 10.667px;
+  height: 10.667px;
+  display: block;
+}
+
+.menu-item-disabled .menu-item-second-icon {
+  opacity: 0.4;
+}
+
+/* Chevron/trailing icon */
+.menu-item-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--menu-item-chevron-size);
+  height: var(--menu-item-chevron-size);
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.menu-item-chevron svg,
+.menu-item-chevron img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Rotate chevron when menu is open */
+.menu-item.menu-item-open .menu-item-chevron svg,
+.menu-item.menu-item-open .menu-item-chevron img {
+  transform: rotate(90deg);
+}
+
+.menu-item-disabled .menu-item-chevron {
+  opacity: 0.4;
+}
+
+/* ========================================
+   SUBMENU (NESTED ITEMS)
+   ======================================== */
+
+.menu-submenu {
+  display: none;
+  flex-direction: column;
+  padding: 0 4px;
+  margin-top: 8px;
+}
+
+.menu-item.menu-item-open + .menu-submenu {
+  display: flex;
+}
+
+/* Submenu items */
+.menu-submenu .menu-item {
+  padding-left: 24px;
+}

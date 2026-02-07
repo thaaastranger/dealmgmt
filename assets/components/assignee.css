@@ -1,0 +1,151 @@
+/**
+ * Assignee Component Styles
+ *
+ * A list of assignees with avatar, name, and role
+ */
+
+/* ========================================
+   ASSIGNEE SECTION
+   ======================================== */
+
+.assignee-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Assignee Header */
+.assignee-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  border-radius: 8px;
+}
+
+.assignee-title {
+  font-family: var(--typography-body2-font-family);
+  font-weight: var(--typography-body2-font-weight);
+  font-size: var(--typography-body2-font-size);
+  line-height: var(--typography-body2-line-height);
+  letter-spacing: var(--typography-body2-letter-spacing);
+  color: var(--assignee-title);
+  margin: 0;
+}
+
+.assignee-add-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.assignee-add-btn:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.assignee-add-btn img,
+.assignee-add-btn svg {
+  width: 16.667px;
+  height: 16.667px;
+  display: block;
+}
+
+/* Assignee List */
+.assignee-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--assignee-item-gap);
+}
+
+/* Assignee Item */
+.assignee-item {
+  display: flex;
+  align-items: center;
+  gap: var(--assignee-avatar-gap);
+  height: 42px;
+  padding-left: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+}
+
+.assignee-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.assignee-item:hover .assignee-menu-btn {
+  display: flex;
+}
+
+.assignee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.assignee-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.assignee-name {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.17px;
+  color: var(--assignee-name);
+  opacity: var(--assignee-name-opacity);
+}
+
+.assignee-role {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: var(--assignee-role);
+  opacity: var(--assignee-role-opacity);
+}
+
+/* Assignee Left Container (avatar + info) */
+.assignee-left {
+  display: flex;
+  align-items: center;
+  gap: var(--assignee-avatar-gap);
+}
+
+/* Assignee Menu Button */
+.assignee-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.assignee-menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.assignee-menu-btn img,
+.assignee-menu-btn svg {
+  width: 16.667px;
+  height: 16.667px;
+  display: block;
+}

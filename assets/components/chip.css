@@ -1,0 +1,55 @@
+/**
+ * Chip Component Styles
+ * Based on Figma design: node-id=458:1069043
+ *
+ * Uses dynamic typography from textStyles.json (body2)
+ * Uses dynamic colors from design system tokens
+ */
+
+/* ========================================
+   CHIP BASE
+   ======================================== */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 100px;
+
+  /* Typography from body2 */
+  font-family: var(--typography-body2-font-family);
+  font-weight: var(--typography-body2-font-weight);
+  font-size: var(--typography-body2-font-size);
+  line-height: var(--typography-body2-line-height);
+  letter-spacing: var(--typography-body2-letter-spacing);
+}
+
+/* ========================================
+   CHIP VARIANTS
+   ======================================== */
+
+.chip-blue {
+  background-color: var(--chip-blue-background);
+  color: var(--chip-blue-text);
+}
+
+.chip-grey {
+  background-color: var(--chip-grey-background);
+  color: var(--chip-grey-text);
+}
+
+.chip-green {
+  background-color: var(--chip-green-background);
+  color: var(--chip-green-text);
+}
+
+.chip-yellow {
+  background-color: var(--chip-yellow-background);
+  color: var(--chip-yellow-text);
+}
+
+.chip-red {
+  background-color: var(--chip-red-background);
+  color: var(--chip-red-text);
+}

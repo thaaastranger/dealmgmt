@@ -1,0 +1,271 @@
+/**
+ * Button Component Styles
+ * Based on Figma design: node-id=37:828
+ *
+ * Uses dynamic typography from textStyles.json (button/large, button/medium, button/small)
+ * Uses dynamic colors from design system tokens
+ *
+ * Variants: fill, outline, text-only
+ * Sizes: small, medium, large
+ * States: enabled, hovered, pressed, disabled
+ */
+
+/* ========================================
+   BASE BUTTON STYLES
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: var(--font-family-primary);
+  text-transform: capitalize;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  /* Remove default button styles */
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--button-outline-border);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Label */
+.btn-label {
+  flex: 1;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+/* Icon container */
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* ========================================
+   SIZE VARIANTS
+   ======================================== */
+
+/* Large */
+.btn-large {
+  padding: 8px 16px;
+  border-radius: var(--radius-medium);
+  font-family: var(--typography-button-large-font-family);
+  font-weight: var(--typography-button-large-font-weight);
+  font-size: var(--typography-button-large-font-size);
+  line-height: var(--typography-button-large-line-height);
+  letter-spacing: var(--typography-button-large-letter-spacing);
+}
+
+.btn-large .btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Medium */
+.btn-medium {
+  padding: 6px 12px;
+  border-radius: var(--radius-medium);
+  font-family: var(--typography-button-medium-font-family);
+  font-weight: var(--typography-button-medium-font-weight);
+  font-size: var(--typography-button-medium-font-size);
+  line-height: var(--typography-button-medium-line-height);
+  letter-spacing: var(--typography-button-medium-letter-spacing);
+}
+
+.btn-medium .btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Small */
+.btn-small {
+  padding: 4px 8px;
+  border-radius: var(--radius-small);
+  font-family: var(--typography-button-small-font-family);
+  font-weight: var(--typography-button-small-font-weight);
+  font-size: var(--typography-button-small-font-size);
+  line-height: var(--typography-button-small-line-height);
+  letter-spacing: var(--typography-button-small-letter-spacing);
+}
+
+.btn-small .btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Small Fill variant special padding */
+.btn-small.btn-fill {
+  padding: 4px 8px 4px 6px;
+}
+
+/* ========================================
+   FILL VARIANT
+   ======================================== */
+
+.btn-fill {
+  background: var(--button-fill-background);
+  color: var(--button-fill-content);
+  border: none;
+}
+
+.btn-fill:hover:not(:disabled) {
+  background: linear-gradient(var(--button-fill-hover-overlay), var(--button-fill-hover-overlay)), var(--button-fill-background);
+}
+
+.btn-fill:active:not(:disabled) {
+  background: linear-gradient(var(--button-fill-pressed-overlay), var(--button-fill-pressed-overlay)), var(--button-fill-background);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-fill:disabled {
+  background: var(--button-fill-background-disabled);
+  color: var(--button-fill-content-disabled);
+}
+
+/* Icon color for fill variant */
+.btn-fill .btn-icon {
+  color: var(--button-fill-content);
+}
+
+.btn-fill:disabled .btn-icon {
+  color: var(--button-fill-content-disabled);
+}
+
+/* ========================================
+   OUTLINE VARIANT
+   ======================================== */
+
+.btn-outline {
+  background: transparent;
+  color: var(--button-outline-content);
+  border: 1px solid var(--button-outline-border-secondary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--button-hover-overlay);
+  border-color: var(--button-outline-border);
+}
+
+.btn-outline:active:not(:disabled) {
+  background: var(--button-pressed-overlay);
+  border-color: var(--button-outline-border);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-outline:disabled {
+  background: transparent;
+  color: var(--button-outline-content-disabled);
+  border-color: var(--button-outline-border-disabled);
+}
+
+/* Icon color for outline variant */
+.btn-outline .btn-icon {
+  color: var(--button-outline-content);
+}
+
+.btn-outline:disabled .btn-icon {
+  color: var(--button-outline-content-disabled);
+}
+
+/* ========================================
+   TEXT ONLY VARIANT
+   ======================================== */
+
+.btn-text-only {
+  background: transparent;
+  color: var(--button-text-content);
+  border: none;
+}
+
+.btn-text-only:hover:not(:disabled) {
+  background: var(--button-hover-overlay);
+}
+
+.btn-text-only:active:not(:disabled) {
+  background: var(--button-pressed-overlay);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-text-only:disabled {
+  background: transparent;
+  color: var(--button-text-content-disabled);
+}
+
+/* Icon color for text-only variant */
+.btn-text-only .btn-icon {
+  color: var(--button-text-content);
+}
+
+.btn-text-only:disabled .btn-icon {
+  color: var(--button-text-content-disabled);
+}
+
+/* ========================================
+   ICON SUPPORT
+   ======================================== */
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Adjust inner icon size for medium/small */
+.btn-medium .btn-icon svg,
+.btn-small .btn-icon svg {
+  width: 16.667px;
+  height: 16.667px;
+  margin: auto;
+}
+
+.btn-large .btn-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Full width button */
+.btn-block {
+  width: 100%;
+}
+
+/* Icon only button (no text) */
+.btn-icon-only {
+  padding: 8px;
+  gap: 0;
+}
+
+.btn-icon-only.btn-small {
+  padding: 6px;
+}
+
+.btn-icon-only.btn-medium {
+  padding: 8px;
+}
+
+.btn-icon-only.btn-large {
+  padding: 10px;
+}

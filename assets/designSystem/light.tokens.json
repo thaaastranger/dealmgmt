@@ -1,0 +1,951 @@
+{
+  "grey": {
+    "white": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#FFFFFF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:370",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "black": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "alpha": 1,
+        "hex": "#000000"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:371",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#FFFFFF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:372",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-20": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9686269760131836,
+          0.9686269760131836,
+          0.9686269760131836
+        ],
+        "alpha": 1,
+        "hex": "#F7F7F7"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:373",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-30": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9294120073318481,
+          0.9294120073318481,
+          0.9294120073318481
+        ],
+        "alpha": 1,
+        "hex": "#EDEDED"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:374",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-40": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8588240146636963,
+          0.8588240146636963,
+          0.8588240146636963
+        ],
+        "alpha": 1,
+        "hex": "#DBDBDB"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:375",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7294120192527771,
+          0.7294120192527771,
+          0.7294120192527771
+        ],
+        "alpha": 1,
+        "hex": "#BABABA"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:376",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-60": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5607839822769165,
+          0.5607839822769165,
+          0.5607839822769165
+        ],
+        "alpha": 1,
+        "hex": "#8F8F8F"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:377",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4196079969406128,
+          0.4196079969406128,
+          0.4196079969406128
+        ],
+        "alpha": 1,
+        "hex": "#6B6B6B"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:378",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-80": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3019610047340393,
+          0.3019610047340393,
+          0.3019610047340393
+        ],
+        "alpha": 1,
+        "hex": "#4D4D4D"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:379",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-90": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "alpha": 1,
+        "hex": "#333333"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:380",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "grey-100": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07843100279569626,
+          0.07843100279569626,
+          0.07843100279569626
+        ],
+        "alpha": 1,
+        "hex": "#141414"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:381",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    }
+  },
+  "blue": {
+    "blue-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9294120073318481,
+          0.9568629860877991,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#EDF4FF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:382",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-20": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.800000011920929,
+          0.8784310221672058,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#CCE0FF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:383",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-30": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6000000238418579,
+          0.7607839703559875,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#99C2FF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:384",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-40": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3803919851779938,
+          0.6313729882240295,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#61A1FF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:385",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.23137299716472626,
+          0.5411760210990906,
+          1
+        ],
+        "alpha": 1,
+        "hex": "#3B8AFF"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:386",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-60": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1294119954109192,
+          0.4392159879207611,
+          0.9411759972572327
+        ],
+        "alpha": 1,
+        "hex": "#2170F0"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:387",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.09803900122642517,
+          0.34902000427246094,
+          0.7803919911384583
+        ],
+        "alpha": 1,
+        "hex": "#1959C7"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:388",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-80": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451000064611435,
+          0.274509996175766,
+          0.6000000238418579
+        ],
+        "alpha": 1,
+        "hex": "#134699"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:389",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-90": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.05098000168800354,
+          0.18039199709892273,
+          0.4196079969406128
+        ],
+        "alpha": 1,
+        "hex": "#0D2E6B"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:390",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "blue-100": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.031373001635074615,
+          0.11372499912977219,
+          0.2784309983253479
+        ],
+        "alpha": 1,
+        "hex": "#081D47"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:391",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    }
+  },
+  "green": {
+    "green-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9333329796791077,
+          0.9803919792175293,
+          0.9529410004615784
+        ],
+        "alpha": 1,
+        "hex": "#EEFAF3"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:392",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-20": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7803919911384583,
+          0.9411759972572327,
+          0.8588240146636963
+        ],
+        "alpha": 1,
+        "hex": "#C7F0DB"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:393",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-30": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5803920030593872,
+          0.8705880045890808,
+          0.7254899740219116
+        ],
+        "alpha": 1,
+        "hex": "#94DEB9"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:394",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-40": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3803919851779938,
+          0.7803919911384583,
+          0.5882350206375122
+        ],
+        "alpha": 1,
+        "hex": "#61C796"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:395",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2588239908218384,
+          0.6901959776878357,
+          0.5058820247650146
+        ],
+        "alpha": 1,
+        "hex": "#42B081"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:396",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-60": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.18039199709892273,
+          0.5921570062637329,
+          0.4313730001449585
+        ],
+        "alpha": 1,
+        "hex": "#2E976E"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:397",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.1294119954109192,
+          0.49019598960876465,
+          0.36078399419784546
+        ],
+        "alpha": 1,
+        "hex": "#217D5C"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:398",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-80": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.09019599854946136,
+          0.37254899740219116,
+          0.2784309983253479
+        ],
+        "alpha": 1,
+        "hex": "#175F47"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:399",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-90": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.058823999017477036,
+          0.2627449929714203,
+          0.20000000298023224
+        ],
+        "alpha": 1,
+        "hex": "#0F4333"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:400",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "green-100": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.035294000059366226,
+          0.16862699389457703,
+          0.1294119954109192
+        ],
+        "alpha": 1,
+        "hex": "#092B21"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:401",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    }
+  },
+  "red": {
+    "red-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9411759972572327,
+          0.9411759972572327
+        ],
+        "alpha": 1,
+        "hex": "#FFF0F0"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:402",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-20": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8196079730987549,
+          0.8196079730987549
+        ],
+        "alpha": 1,
+        "hex": "#FFD1D1"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:403",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-30": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.6392160058021545,
+          0.6392160058021545
+        ],
+        "alpha": 1,
+        "hex": "#FFA3A3"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:404",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-40": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9607840180397034,
+          0.4352940022945404,
+          0.4352940022945404
+        ],
+        "alpha": 1,
+        "hex": "#F56F6F"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:405",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9019610285758972,
+          0.3019610047340393,
+          0.3019610047340393
+        ],
+        "alpha": 1,
+        "hex": "#E64D4D"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:406",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-60": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.800000011920929,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "alpha": 1,
+        "hex": "#CC3333"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:407",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.6392160058021545,
+          0.16078400611877441,
+          0.16078400611877441
+        ],
+        "alpha": 1,
+        "hex": "#A32929"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:408",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-80": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.49019598960876465,
+          0.12156900018453598,
+          0.12156900018453598
+        ],
+        "alpha": 1,
+        "hex": "#7D1F1F"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:409",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-90": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.34117600321769714,
+          0.07843100279569626,
+          0.07843100279569626
+        ],
+        "alpha": 1,
+        "hex": "#571414"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:410",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "red-100": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.21960799396038055,
+          0.05098000168800354,
+          0.05098000168800354
+        ],
+        "alpha": 1,
+        "hex": "#380D0D"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:411",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    }
+  },
+  "yellow": {
+    "yellow-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9764710068702698,
+          0.9215689897537231
+        ],
+        "alpha": 1,
+        "hex": "#FFF9EB"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:412",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-20": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.9411759972572327,
+          0.7803919911384583
+        ],
+        "alpha": 1,
+        "hex": "#FFF0C7"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:413",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-30": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.8823530077934265,
+          0.5686269998550415
+        ],
+        "alpha": 1,
+        "hex": "#FFE191"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:414",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-40": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9803919792175293,
+          0.8156859874725342,
+          0.36078399419784546
+        ],
+        "alpha": 1,
+        "hex": "#FAD05C"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:415",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.9529410004615784,
+          0.7098039984703064,
+          0.21960799396038055
+        ],
+        "alpha": 1,
+        "hex": "#F3B538"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:416",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-60": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8784310221672058,
+          0.6196079850196838,
+          0.12156900018453598
+        ],
+        "alpha": 1,
+        "hex": "#E09E1F"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:417",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.7215690016746521,
+          0.49803900718688965,
+          0.09019599854946136
+        ],
+        "alpha": 1,
+        "hex": "#B87F17"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:418",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-80": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.5372549891471863,
+          0.3803919851779938,
+          0.06666699796915054
+        ],
+        "alpha": 1,
+        "hex": "#896111"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:419",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-90": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.3803919851779938,
+          0.2666670083999634,
+          0.04705899953842163
+        ],
+        "alpha": 1,
+        "hex": "#61440C"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:420",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    },
+    "yellow-100": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2509799897670746,
+          0.18039199709892273,
+          0.02745099924504757
+        ],
+        "alpha": 1,
+        "hex": "#402E07"
+      },
+      "$extensions": {
+        "com.figma.variableId": "VariableID:37:421",
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.isOverride": true
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "light"
+  }
+}

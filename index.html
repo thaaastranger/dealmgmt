@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Northway Fleet Operations Platform</title>
+    <!-- Design System Tokens -->
+    <link rel="stylesheet" href="assets/designSystem/tokens.css">
+    <!-- Button Component -->
+    <link rel="stylesheet" href="assets/components/button.css">
+    <!-- Breadcrumb Component -->
+    <link rel="stylesheet" href="assets/components/breadcrumb.css">
+    <!-- Navigation Component -->
+    <link rel="stylesheet" href="assets/components/navigation.css">
+    <!-- Assignee Component -->
+    <link rel="stylesheet" href="assets/components/assignee.css">
+    <!-- Chip Component -->
+    <link rel="stylesheet" href="assets/components/chip.css">
+    <!-- Menu Component -->
+    <link rel="stylesheet" href="assets/components/menu.css">
+    <!-- Main Styles -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -26,53 +41,89 @@
             </div>
 
             <!-- Create Task Button -->
-            <button class="create-task-btn">
-                <span>Create Task</span>
+            <button class="btn btn-fill btn-medium create-task-btn">
+                <span class="btn-label">Create Task</span>
             </button>
 
             <!-- Main Navigation -->
-            <nav class="main-nav">
-                <a href="#" class="nav-item">
-                    <img src="assets/icons/mac laptop notebook - Iconly Pro.svg" alt="Workspace">
-                    <span>My Workspace</span>
+            <nav class="menu main-nav">
+                <a href="#" class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            <img src="assets/icons/mac laptop notebook - Iconly Pro.svg" alt="">
+                        </div>
+                        <span class="menu-item-label">My Workspace</span>
+                    </div>
                 </a>
-                <a href="#" class="nav-item">
-                    <img src="assets/icons/contacts 2 - Iconly Pro.svg" alt="Contacts">
-                    <span>Contacts</span>
+                <a href="#" class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            <img src="assets/icons/contacts 2 - Iconly Pro.svg" alt="">
+                        </div>
+                        <span class="menu-item-label">Contacts</span>
+                    </div>
                 </a>
-                <a href="#" class="nav-item">
-                    <img src="assets/icons/Shuffle - Iconly Pro.svg" alt="Flows">
-                    <span>Flows</span>
+                <a href="#" class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            <img src="assets/icons/Shuffle - Iconly Pro.svg" alt="">
+                        </div>
+                        <span class="menu-item-label">Flows</span>
+                    </div>
                 </a>
-                <a href="#" class="nav-item">
-                    <img src="assets/icons/User - Iconly Pro.svg" alt="Members">
-                    <span>Members</span>
+                <a href="#" class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            <img src="assets/icons/User - Iconly Pro.svg" alt="">
+                        </div>
+                        <span class="menu-item-label">Members</span>
+                    </div>
                 </a>
-                <a href="#" class="nav-item">
-                    <img src="assets/icons/Setting - Iconly Pro.svg" alt="Settings">
-                    <span>Settings</span>
+                <a href="#" class="menu-item">
+                    <div class="menu-item-left">
+                        <div class="menu-item-icon">
+                            <img src="assets/icons/Setting - Iconly Pro.svg" alt="">
+                        </div>
+                        <span class="menu-item-label">Settings</span>
+                    </div>
                 </a>
             </nav>
 
             <!-- Organization Section -->
             <div class="org-section">
                 <span class="org-label">ORGANIZATION</span>
-                <nav class="org-nav">
-                    <a href="#" class="nav-item active">
-                        <img src="assets/icons/Combine - Iconly Pro.svg" alt="Deals">
-                        <span>Deals</span>
+                <nav class="menu org-nav">
+                    <a href="#" class="menu-item menu-item-active">
+                        <div class="menu-item-left">
+                            <div class="menu-item-icon">
+                                <img src="assets/icons/Combine - Iconly Pro.svg" alt="">
+                            </div>
+                            <span class="menu-item-label">Deals</span>
+                        </div>
                     </a>
-                    <a href="#" class="nav-item">
-                        <img src="assets/icons/Money paper refresh 2 - Iconly Pro.svg" alt="Adoption">
-                        <span>Adoption</span>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item-left">
+                            <div class="menu-item-icon">
+                                <img src="assets/icons/Money paper refresh 2 - Iconly Pro.svg" alt="">
+                            </div>
+                            <span class="menu-item-label">Adoption</span>
+                        </div>
                     </a>
-                    <a href="#" class="nav-item">
-                        <img src="assets/icons/Bookmark - Iconly Pro.svg" alt="Billing">
-                        <span>Billing</span>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item-left">
+                            <div class="menu-item-icon">
+                                <img src="assets/icons/Bookmark - Iconly Pro.svg" alt="">
+                            </div>
+                            <span class="menu-item-label">Billing</span>
+                        </div>
                     </a>
-                    <a href="#" class="nav-item">
-                        <img src="assets/icons/Setting - Iconly Pro.svg" alt="Organization Settings">
-                        <span>Organization Settings</span>
+                    <a href="#" class="menu-item">
+                        <div class="menu-item-left">
+                            <div class="menu-item-icon">
+                                <img src="assets/icons/Setting - Iconly Pro.svg" alt="">
+                            </div>
+                            <span class="menu-item-label">Organization Settings</span>
+                        </div>
                     </a>
                 </nav>
             </div>
@@ -95,11 +146,14 @@
         <!-- CONTENT (White Card Container) -->
         <div class="content">
             <!-- Breadcrumb -->
-            <!-- Breadcrumb -->
             <nav class="breadcrumb-nav">
                 <a href="#" class="breadcrumb-link">Deals</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Northway Fleet Operations Platform</span>
+                <span class="breadcrumb-separator">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 2.5L7 5.5L4 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="breadcrumb-current">Deals</span>
             </nav>
 
             <!-- HEADER Section (Deal Title + AI Banner) -->
@@ -108,7 +162,9 @@
                     <h1 class="deal-title">Northway Fleet Operations Platform</h1>
                 </div>
                 <div class="header-right">
-                    <button class="manage-btn">Manage</button>
+                    <button class="btn btn-outline btn-medium">
+                        <span class="btn-label">Manage</span>
+                    </button>
                     <button class="more-btn">
                         <img src="assets/icons/menu.svg" alt="More">
                     </button>
@@ -120,24 +176,32 @@
                 <!-- MAIN CONTENT AREA (Activity Feed) -->
                 <div class="main-content-area">
                     <!-- Navigation within main (Tabs) -->
-                    <div class="tabs">
-                        <button class="tab active" data-tab="activity">
-                            <img src="assets/icons/Heart rate - Iconly Pro.svg" alt="Activity">
+                    <nav class="navigation-tabs">
+                        <button class="navigation-tab active" data-tab="activity">
+                            <div class="navigation-tab-icon">
+                                <img src="assets/icons/Heart rate - Iconly Pro.svg" alt="">
+                            </div>
                             <span>Activity</span>
                         </button>
-                        <button class="tab" data-tab="files">
-                            <img src="assets/icons/Folder File - Iconly Pro.svg" alt="Files">
+                        <button class="navigation-tab" data-tab="files">
+                            <div class="navigation-tab-icon">
+                                <img src="assets/icons/Folder File - Iconly Pro.svg" alt="">
+                            </div>
                             <span>Files</span>
                         </button>
-                        <button class="tab" data-tab="reminders">
-                            <img src="assets/icons/Calendar - Iconly Pro.svg" alt="Reminders">
+                        <button class="navigation-tab" data-tab="reminders">
+                            <div class="navigation-tab-icon">
+                                <img src="assets/icons/Bookmark - Iconly Pro.svg" alt="">
+                            </div>
                             <span>Reminders</span>
                         </button>
-                        <button class="tab" data-tab="ai-insights">
-                            <img src="assets/icons/Stars - Iconly Pro.svg" alt="AI Insights">
+                        <button class="navigation-tab" data-tab="ai-insights">
+                            <div class="navigation-tab-icon">
+                                <img src="assets/icons/Stars - Iconly Pro.svg" alt="">
+                            </div>
                             <span>AI Insights</span>
                         </button>
-                    </div>
+                    </nav>
 
                     <!-- Activity Feed (Timeline) -->
                     <div class="activity-feed timeline-feed" id="activity-tab">
@@ -173,12 +237,16 @@
                                     </p>
                                     <div class="timeline-footer">
                                         <div class="tags">
-                                            <span class="tag risk">Deal at risk</span>
-                                            <span class="tag purple">Needs ROI proof by Friday</span>
+                                            <span class="chip chip-red">Deal at risk</span>
+                                            <span class="chip chip-yellow">Needs ROI proof by Friday</span>
                                         </div>
                                         <div class="actions">
-                                            <button class="action-btn ghost">Schedule Call</button>
-                                            <button class="action-btn primary black">Send ROI</button>
+                                            <button class="btn btn-text-only btn-small">
+                                                <span class="btn-label">Schedule Call</span>
+                                            </button>
+                                            <button class="btn btn-fill btn-small">
+                                                <span class="btn-label">Send ROI</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -214,12 +282,16 @@
                                     </p>
                                     <div class="timeline-footer">
                                         <div class="tags">
-                                            <span class="tag black">AI Recommended</span>
-                                            <span class="tag green">High Impact</span>
+                                            <span class="chip chip-grey">AI Recommended</span>
+                                            <span class="chip chip-green">High Impact</span>
                                         </div>
                                         <div class="actions">
-                                            <button class="action-btn ghost">View Case Study</button>
-                                            <button class="action-btn primary black">Email To David</button>
+                                            <button class="btn btn-text-only btn-small">
+                                                <span class="btn-label">View Case Study</span>
+                                            </button>
+                                            <button class="btn btn-fill btn-small">
+                                                <span class="btn-label">Email To David</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -254,11 +326,15 @@
                                     </p>
                                     <div class="timeline-footer">
                                         <div class="tags">
-                                            <span class="tag red-badge">2-week setup vs our 8 weeks</span>
+                                            <span class="chip chip-red">2-week setup vs our 8 weeks</span>
                                         </div>
                                         <div class="actions">
-                                            <button class="action-btn ghost">LogixFlow</button>
-                                            <button class="action-btn primary black">Request Intro</button>
+                                            <button class="btn btn-text-only btn-small">
+                                                <span class="btn-label">LogixFlow</span>
+                                            </button>
+                                            <button class="btn btn-fill btn-small">
+                                                <span class="btn-label">Request Intro</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -316,27 +392,37 @@
                     </section>
 
                     <!-- Assignee Section -->
-                    <section class="panel-section">
-                        <div class="section-header collapsible" data-section="assignee">
-                            <h3>Assignee</h3>
-                            <button class="expand-btn">
-                                <img src="assets/icons/Add.svg" alt="Add">
+                    <section class="assignee-section">
+                        <div class="assignee-header">
+                            <h3 class="assignee-title">Assignee</h3>
+                            <button class="assignee-add-btn">
+                                <img src="assets/icons/Add.svg" alt="Add assignee">
                             </button>
                         </div>
-                        <div class="assignee-list" id="assignee-section">
+                        <div class="assignee-list">
                             <div class="assignee-item">
-                                <img src="assets/img/Ellipse 32.png" alt="Sobhan Rabbani">
-                                <div class="assignee-info">
-                                    <span class="assignee-name">Sobhan Rabbani</span>
-                                    <span class="assignee-role">Project manager</span>
+                                <div class="assignee-left">
+                                    <img src="assets/img/Ellipse 32.png" alt="" class="assignee-avatar">
+                                    <div class="assignee-info">
+                                        <span class="assignee-name">Sobhan Rabbani</span>
+                                        <span class="assignee-role">Project manager</span>
+                                    </div>
                                 </div>
+                                <button class="assignee-menu-btn">
+                                    <img src="assets/icons/menu.svg" alt="Menu">
+                                </button>
                             </div>
                             <div class="assignee-item">
-                                <img src="assets/img/Ellipse 32-1.png" alt="Sarah Sanders">
-                                <div class="assignee-info">
-                                    <span class="assignee-name">Sarah Sanders</span>
-                                    <span class="assignee-role">Director</span>
+                                <div class="assignee-left">
+                                    <img src="assets/img/Ellipse 32-1.png" alt="" class="assignee-avatar">
+                                    <div class="assignee-info">
+                                        <span class="assignee-name">Sarah Sanders</span>
+                                        <span class="assignee-role">Director</span>
+                                    </div>
                                 </div>
+                                <button class="assignee-menu-btn">
+                                    <img src="assets/icons/menu.svg" alt="Menu">
+                                </button>
                             </div>
                         </div>
                     </section>
@@ -407,7 +493,9 @@
                 <iframe id="pdf-frame" src="" frameborder="0"></iframe>
                 <div class="pdf-placeholder">
                     <p>Preview not available in this demo.</p>
-                    <button class="action-btn primary black">Download File</button>
+                    <button class="btn btn-fill btn-medium">
+                        <span class="btn-label">Download File</span>
+                    </button>
                 </div>
             </div>
         </div>

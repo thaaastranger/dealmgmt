@@ -1,0 +1,150 @@
+{
+  "component": "button",
+  "version": "1.0.0",
+  "description": "Button component with multiple variants, sizes, and states",
+  "variants": {
+    "fill": {
+      "name": "Fill",
+      "description": "Solid background button for primary actions",
+      "states": {
+        "enabled": {
+          "background": "var(--button-fill-background)",
+          "color": "var(--button-fill-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "hovered": {
+          "background": "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), var(--button-fill-background)",
+          "color": "var(--button-fill-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "pressed": {
+          "background": "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), var(--button-fill-background)",
+          "color": "var(--button-fill-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "disabled": {
+          "background": "var(--button-fill-background-disabled)",
+          "color": "var(--button-fill-content-disabled)",
+          "border": "none",
+          "cursor": "not-allowed"
+        }
+      }
+    },
+    "outline": {
+      "name": "Outline",
+      "description": "Bordered button for secondary actions",
+      "states": {
+        "enabled": {
+          "background": "transparent",
+          "color": "var(--button-outline-content)",
+          "border": "1px solid var(--button-outline-border-secondary)",
+          "cursor": "pointer"
+        },
+        "hovered": {
+          "background": "var(--button-outline-background-hover)",
+          "color": "var(--button-outline-content)",
+          "border": "1px solid var(--button-outline-border)",
+          "cursor": "pointer"
+        },
+        "pressed": {
+          "background": "var(--button-outline-background-pressed)",
+          "color": "var(--button-outline-content)",
+          "border": "1px solid var(--button-outline-border)",
+          "cursor": "pointer"
+        },
+        "disabled": {
+          "background": "transparent",
+          "color": "var(--button-outline-content-disabled)",
+          "border": "1px solid var(--button-outline-border-disabled)",
+          "cursor": "not-allowed"
+        }
+      }
+    },
+    "textOnly": {
+      "name": "Text Only",
+      "description": "Text-only button for tertiary actions",
+      "states": {
+        "enabled": {
+          "background": "transparent",
+          "color": "var(--button-text-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "hovered": {
+          "background": "var(--button-text-background-hover)",
+          "color": "var(--button-text-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "pressed": {
+          "background": "var(--button-text-background-pressed)",
+          "color": "var(--button-text-content)",
+          "border": "none",
+          "cursor": "pointer"
+        },
+        "disabled": {
+          "background": "transparent",
+          "color": "var(--button-text-content-disabled)",
+          "border": "none",
+          "cursor": "not-allowed"
+        }
+      }
+    }
+  },
+  "sizes": {
+    "small": {
+      "name": "Small",
+      "padding": "4px 8px 4px 6px",
+      "paddingWithIcon": "4px 8px 4px 6px",
+      "gap": "8px",
+      "gapOutline": "12px",
+      "borderRadius": "var(--radius-small)",
+      "fontSize": "13px",
+      "lineHeight": "22px",
+      "letterSpacing": "0.46px",
+      "iconSize": "20px",
+      "iconSizeInner": "16.667px"
+    },
+    "medium": {
+      "name": "Medium",
+      "padding": "6px 12px 6px 8px",
+      "paddingWithIcon": "6px 12px 6px 8px",
+      "gap": "8px",
+      "gapOutline": "12px",
+      "borderRadius": "var(--radius-medium)",
+      "fontSize": "14px",
+      "lineHeight": "24px",
+      "letterSpacing": "0.4px",
+      "iconSize": "20px",
+      "iconSizeInner": "16.667px"
+    },
+    "large": {
+      "name": "Large",
+      "padding": "8px 16px 8px 12px",
+      "paddingWithIcon": "8px 16px 8px 12px",
+      "gap": "8px",
+      "gapOutline": "12px",
+      "borderRadius": "var(--radius-medium)",
+      "fontSize": "16px",
+      "lineHeight": "26px",
+      "letterSpacing": "0.46px",
+      "iconSize": "24px",
+      "iconSizeInner": "24px"
+    }
+  },
+  "interactions": {
+    "hover": {
+      "transition": "all 0.2s ease-in-out"
+    },
+    "active": {
+      "transition": "all 0.1s ease-in-out"
+    },
+    "focus": {
+      "outline": "2px solid var(--button-outline-border)",
+      "outlineOffset": "2px"
+    }
+  }
+}

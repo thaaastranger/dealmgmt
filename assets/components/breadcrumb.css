@@ -1,0 +1,58 @@
+/**
+ * Breadcrumb Component Styles
+ *
+ * A navigation component showing hierarchical page location
+ */
+
+/* ========================================
+   BASE BREADCRUMB STYLES
+   ======================================== */
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--breadcrumb-gap);
+  margin-bottom: 8px;
+
+  /* Typography */
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.17px;
+}
+
+/* Breadcrumb Link */
+.breadcrumb-link {
+  color: var(--breadcrumb-link);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.breadcrumb-link:hover {
+  color: var(--breadcrumb-link-hover);
+}
+
+/* Breadcrumb Separator */
+.breadcrumb-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--breadcrumb-separator);
+  width: 10.667px;
+  height: 10.667px;
+  flex-shrink: 0;
+}
+
+.breadcrumb-separator svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+/* Breadcrumb Current Page */
+.breadcrumb-current {
+  color: var(--breadcrumb-current);
+  opacity: 0.5;
+  font-weight: 400;
+}

@@ -1,0 +1,77 @@
+/**
+ * Navigation Component Styles
+ *
+ * A horizontal tab navigation component
+ */
+
+/* ========================================
+   BASE NAVIGATION STYLES
+   ======================================== */
+
+.navigation-tabs {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--navigation-gap);
+  border-bottom: 1px solid var(--navigation-border-container);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Navigation Tab Item */
+.navigation-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--navigation-item-gap);
+  padding: 4px 2px 8px 2px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  /* Typography - inactive by default */
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.17px;
+  color: var(--navigation-item-inactive);
+}
+
+/* Navigation Tab Icon */
+.navigation-tab-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.56;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-tab-icon img,
+.navigation-tab-icon svg {
+  width: 16.667px;
+  height: 16.667px;
+  display: block;
+}
+
+/* Active State */
+.navigation-tab.active {
+  color: var(--navigation-item-active);
+  border-bottom-color: var(--navigation-border-active);
+
+  /* Typography - active */
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.navigation-tab.active .navigation-tab-icon {
+  opacity: 0.5;
+}
+
+/* Hover State (for inactive tabs) */
+.navigation-tab:not(.active):hover {
+  color: var(--color-grey-70);
+}

@@ -233,23 +233,20 @@ function confirmAddCustomField() {
 // TAB FUNCTIONALITY
 // ========================
 function initTabs() {
-    const tabs = document.querySelectorAll('.tab');
+    const tabs = document.querySelectorAll('.navigation-tab');
     const activityFeed = document.getElementById('activity-tab');
     
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
             // Remove active class from all tabs
             tabs.forEach(t => t.classList.remove('active'));
-            
+
             // Add active class to clicked tab
             this.classList.add('active');
-            
+
             // Handle tab content switching
             const tabName = this.dataset.tab;
             handleTabSwitch(tabName);
-            
-            // Add ripple effect
-            createRipple(this, event);
         });
     });
 }
