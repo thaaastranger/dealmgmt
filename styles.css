@@ -1007,6 +1007,11 @@ body {
     color: var(--text-muted);
 }
 
+.close-modal-btn:hover {
+    opacity: 1;
+    color: var(--text-primary);
+}
+
 .info-value {
     font-size: 13px;
     color: var(--text-primary);
@@ -1173,19 +1178,20 @@ body {
 .file-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
+    gap: 12px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: var(--transition);
     position: relative;
+    margin-bottom: 4px;
 }
 
 .file-item:hover {
-    border-color: var(--primary-blue);
-    background: #f0f7ff;
+    background: #F8FAFC; /* Light gray hover */
+    border-color: transparent;
 }
 
 .file-item img {
@@ -1194,7 +1200,7 @@ body {
 }
 
 .file-item span {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-primary);
     font-weight: 500;
     flex: 1;
