@@ -34,7 +34,7 @@
 }
 
 .menu-item:hover:not(.menu-item-disabled) {
-  background: linear-gradient(var(--menu-item-background-hover), var(--menu-item-background-hover)), var(--menu-item-background);
+  background: var(--menu-item-background-hover);
 }
 
 .menu-item.menu-item-active {

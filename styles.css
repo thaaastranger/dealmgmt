@@ -670,21 +670,7 @@ body {
     border-radius: 50%;
 }
 
-.due-badge.orange {
-    background-color: #FFEDD5; /* Orange-100 */
-    color: #C2410C; /* Orange-700 */
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.match-badge {
-    color: var(--text-muted);
-    font-size: 13px;
-}
+/* Badge styles removed - now using chip component */
 
 .menu-btn {
     margin-left: auto;
@@ -915,9 +901,7 @@ body {
     border-radius: var(--radius-full);
 }
 
-.stage-value {
-    color: var(--stage-blue);
-}
+/* Stage value now uses chip component */
 
 /* Context Dropdown */
 .context-dropdown {
@@ -979,38 +963,42 @@ body {
 .files-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px; /* Gap between items 8px */
 }
 
-/* File Item - Matching Assignee Item Pattern */
+/* File Item */
+/* File Item - Matching Assignee Item */
 .file-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    height: 42px;
-    padding-left: 8px;
-    border-radius: 8px;
+    gap: 8px; /* Gap between icon and text 8px */
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease;
     position: relative;
+    margin-bottom: 2px;
 }
 
 .file-item:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-    justify-content: space-between;
-    padding-right: 8px;
-}
-
-.file-item:hover .file-menu-btn {
-    display: flex;
+    background: var(--bg-gray-light);
 }
 
 .file-item img,
 .file-item svg {
-    width: 24px;
-    height: 24px;
+    width: 16px; /* Small icon 16px */
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--primary-blue);
     flex-shrink: 0;
-    color: var(--text-secondary);
 }
 
 .file-item span {

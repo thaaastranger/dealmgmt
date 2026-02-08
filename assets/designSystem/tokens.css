@@ -142,17 +142,17 @@
   --menu-item-icon-size: 16px;
   --menu-item-chevron-size: 24px;
 
-  /* Chip */
-  --chip-blue-background: rgba(1, 111, 208, 0.08);
-  --chip-blue-text: #0061b7;
-  --chip-grey-background: rgba(0, 0, 0, 0.08);
-  --chip-grey-text: var(--color-grey-black);
-  --chip-green-background: rgba(62, 180, 109, 0.08);
-  --chip-green-text: #3eb46d;
-  --chip-yellow-background: rgba(250, 121, 41, 0.08);
-  --chip-yellow-text: #fa7929;
-  --chip-red-background: rgba(250, 41, 44, 0.08);
-  --chip-red-text: #fa292c;
+  /* Tag */
+  --tag-blue-background: rgba(1, 111, 208, 0.08);
+  --tag-blue-text: #0061b7;
+  --tag-grey-background: rgba(0, 0, 0, 0.08);
+  --tag-grey-text: var(--color-grey-black);
+  --tag-green-background: rgba(62, 180, 109, 0.08);
+  --tag-green-text: #3eb46d;
+  --tag-yellow-background: rgba(250, 121, 41, 0.08);
+  --tag-yellow-text: #fa7929;
+  --tag-red-background: rgba(250, 41, 44, 0.08);
+  --tag-red-text: #fa292c;
 
   /* Typography */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
